@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Subs</title>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" required v-model="name" placeholder="Name"/>
+
+    <input type="email" required v-model="email" placeholder="Email"/>
+
+    <div class="submit">
+        {{submit}}
+
+    </div>
+
+    <div class="message">{{mess}}</div>
+
+    <div v-for="list in lists">
+
+        <div class="list">
+
+            <div v-on:click="list.flipped=!list.flipped" v-show="!list.flipped" class="1">
+
+                <div>{{list.name}}</div>
+            </div>
+
+            <div v-on:click="list.flipped=! list.flipped" v-show="list.flipped" class="2">
+                <div>{{list.codename}}</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
